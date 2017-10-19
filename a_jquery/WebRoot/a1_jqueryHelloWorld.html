@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+    	/* 用jquery实现checkbox全选 全部选*/
+    	$(function(){
+    		$("#isOrNotAll").click(function(){
+    			var flag = this.checked;
+    			$(":checkbox[name='i']").attr("checked", flag);
+    		});
+    		
+    		//让#isOrNotAll 的checked逻辑正常
+    		$(":checkbox[name='i']").click(function(){
+    			$("#isOrNotAll").attr("checked",
+    				$(":checkbox[name='i']").length == $(":checkbox[name='i']:checked").length);
+    		});
+    	});
+    </script>
+  </head>
+  
+  <body>
+    全选/全部选<input type="checkbox" id="isOrNotAll"><br>
+    1<input type="checkbox" name="i">&nbsp;&nbsp;&nbsp;&nbsp;
+    2<input type="checkbox" name="i">&nbsp;&nbsp;&nbsp;&nbsp;
+    3<input type="checkbox" name="i">
+  </body>
+</html>

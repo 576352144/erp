@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>b1_createOrInsertDom.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+	<script type="text/javascript" src="jquery/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//append() 与 appendTo()
+			$("#city").append("<li id='p1'>成都</li>");
+			$("<li id='p1'>武汉</li>").appendTo("ul");
+			
+			//prepend() 与 prependTo()
+			$("#city").prepend("<li id='p1'>成都pre</li>");
+			$("<li id='p1'>武汉pre</li>").prependTo("ul");
+			
+			//after() 与 insertAfter()
+			$("#rl").after("<li id='p1'>狼人杀after</li>");
+			$("<li id='p1'>爬山after</li>").insertAfter("#rl");
+			//before() 与 insertBefore()
+			$("#rl").before("<li id='p1'>狼人杀before</li>");
+			$("<li id='p1'>爬山before</li>").insertBefore("#rl");
+		});
+	</script>
+  </head>
+  
+  <body>
+		<p>你喜欢哪个城市?</p>
+		<ul id="city">
+			<li id="bj" name="BeiJing">北京</li>
+			<li>上海</li>
+			<li id="dj">东京</li>
+			<li id="se">首尔</li>
+		</ul>
+		
+		<br><br>
+		<p>你喜欢哪款单机游戏?</p>
+		<ul id="game">
+			<li id="rl">红警</li>
+			<li>实况</li>
+			<li>极品飞车</li>
+			<li>魔兽</li>
+		</ul>
+		
+		<br><br>
+		gender: 
+			<input type="radio" name="gender" value="male"/>Male
+			<input type="radio" name="gender" value="female"/>Female
+	
+		<br><br>
+		name: <input type="text" name="username" value="atguigu"/>
+		
+	</body>
+</html>
